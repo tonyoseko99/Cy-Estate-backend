@@ -1,12 +1,6 @@
 class House < ApplicationRecord
-    def index
-        @houses = House.all
-        render json: @houses
-    end
-
-    def show
-        @house = House.find(params[:id])
-        render json: @house
-    end
-
+    belongs_to :admin
+    has_many :reviews
+    has_and_belongs_to_many :users, through: :favorites
+    has_many :searches
 end

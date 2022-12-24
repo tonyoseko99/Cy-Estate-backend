@@ -8,4 +8,6 @@ class Admin < ApplicationRecord
 
     # Add the name attribute
     attr_accessor :name
+
+    has_many :houses
 end

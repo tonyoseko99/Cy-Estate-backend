@@ -15,6 +15,9 @@ gem "bcrypt", "~> 3.1.7"
 # Use devise 
 gem "devise", "~> 4.8"
 
+# Use faker for seeding data
+gem "faker", "~> 2.18"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 

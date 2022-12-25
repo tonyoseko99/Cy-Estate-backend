@@ -5,6 +5,7 @@ class CreateHouses < ActiveRecord::Migration[7.0]
       t.integer :price
       t.integer :bedrooms
       t.integer :bathrooms
+      t.string :image
 
       t.timestamps
     end

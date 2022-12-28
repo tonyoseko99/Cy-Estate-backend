@@ -3,17 +3,18 @@ puts "...seeding the database..."
 # use faker to create the data
 10.times do
     House.create(
+        title: Faker::Address.community,
         address: Faker::Address.street_address,
         price: Faker::Commerce.price,
         bedrooms: Faker::Number.between(from: 1, to: 5),
-        bathrooms: Faker::Number.between(from: 1, to: 5),
+        description: Faker::Lorem.paragraph,
         image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['house'])
     )
 end
 
 # create two users withour using faker
-User.create(name: "John", email: "j@test.com", password: "123")
-User.create(name: "Jane", email: "jane@test.com", password: "123")
+User.create(username: "John", email: "j@test.com", password: "123")
+User.create(username: "Jane", email: "jane@test.com", password: "123")
 
 # create 5 reviews using faker
 5.times do

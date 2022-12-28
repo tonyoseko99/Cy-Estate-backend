@@ -7,7 +7,7 @@ class HousesController < ApplicationController
 
     def show
         @house = House.find(params[:id])
-        render json: @house
+        render json: @house, include: [:reviews]
     end
 
     def create
@@ -40,7 +40,7 @@ class HousesController < ApplicationController
     private
 
     def house_params
-        params.require(:house).permit(:address, :price, :bedrooms, :bathrooms)
+        params.require(:house).permit(:address, :price, :bedrooms, :description, :image, :title)
     end
 
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :superusers
   resources :reviews
   resources :favorites
   resources :searches

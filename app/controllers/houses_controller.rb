@@ -2,12 +2,12 @@ class HousesController < ApplicationController
 
     def index
         @houses = House.all
-        render json: @houses
+        render json: @houses, include: [:reviews]
     end
 
     def show
         @house = House.find(params[:id])
-        render json: @house, include: [:reviews]
+        render json: @house
     end
 
     def create

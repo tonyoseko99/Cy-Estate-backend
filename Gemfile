@@ -21,6 +21,9 @@ gem "faker", "~> 2.18"
 # Use serializer
 gem "active_model_serializers", "~> 0.10.12"
 
+# Add rack cors
+gem "rack-cors", "~> 1.1"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 

@@ -8,7 +8,7 @@ puts "...seeding the database..."
         price: Faker::Commerce.price,
         bedrooms: Faker::Number.between(from: 1, to: 2),
         description: Faker::Lorem.paragraph,
-        image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['house'])
+        image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['building'])
     )
 end
 

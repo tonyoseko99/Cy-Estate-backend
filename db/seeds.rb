@@ -8,13 +8,16 @@ puts "...seeding the database..."
         price: Faker::Commerce.price,
         bedrooms: Faker::Number.between(from: 1, to: 2),
         description: Faker::Lorem.paragraph,
-        image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['building'])
+        image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['house'])
     )
 end
 
 # create two users withour using faker
 User.create(username: "John", email: "j@test.com", password: "123")
 User.create(username: "Jane", email: "jane@test.com", password: "123")
+
+# Create a superuser
+superuser = Superuser.create(email: "superuser@example.com", password: "password", role: "admin")
 
 # create 5 reviews using faker
 5.times do
@@ -40,5 +43,13 @@ end
         price_range: Faker::Number.between(from: 100000, to: 1000000)
     )
 end
+
+Cart.create([
+    { user_id: 1, total_price: 20000 },
+    { user_id: 2, total_price: 30000 },
+    { user_id: 3, total_price: 40000 },
+    { user_id: 4, total_price: 50000 },
+    { user_id: 5, total_price: 60000 }
+])
 
 puts "done seeding the database..."

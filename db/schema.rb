@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_232811) do
     t.integer "bedrooms"
     t.string "description"
     t.string "image"
-    t.string "reviews"
+    t.string "gallery"
     t.integer "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

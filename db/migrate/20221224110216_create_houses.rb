@@ -7,7 +7,7 @@ class CreateHouses < ActiveRecord::Migration[7.0]
       t.integer :bedrooms
       t.string :description
       t.string :image
-      t.string :reviews
+      t.string :gallery
       t.integer :cart_id
       
 
